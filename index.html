@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>My Image Gallery</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header>
+        <h1>My Image Gallery</h1>
+        <p>Explore beautiful moments</p>
+    </header>
+
+
+    <!-- Category Filter Buttons -->
+    <div class="filters">
+
+        <button onclick="filterImages('all')">
+            All
+        </button>
+
+        <button onclick="filterImages('nature')">
+            Nature
+        </button>
+
+        <button onclick="filterImages('city')">
+            City
+        </button>
+
+        <button onclick="filterImages('animals')">
+            Animals
+        </button>
+
+    </div>
+
+
+    <!-- Image Gallery -->
+    <div class="gallery">
+
+        <!-- Nature Image -->
+        <div class="gallery-item nature">
+            <img
+                src="images/image1.jpg"
+                alt="Nature"
+                onclick="openLightbox(0)"
+            >
+        </div>
+
+
+        <!-- City Image -->
+        <div class="gallery-item city">
+            <img
+                src="images/image2.jpg"
+                alt="City"
+                onclick="openLightbox(1)"
+            >
+        </div>
+
+
+        <!-- Animal Image -->
+        <div class="gallery-item animals">
+            <img
+                src="images/image3.jpg"
+                alt="Animal"
+                onclick="openLightbox(2)"
+            >
+        </div>
+
+    </div>
+
+
+    <!-- Lightbox -->
+    <div id="lightbox" class="lightbox">
+
+        <!-- Close Button -->
+        <span class="close" onclick="closeLightbox()">
+            &times;
+        </span>
+
+
+        <!-- Previous Button -->
+        <button class="prev" onclick="changeImage(-1)">
+            &#10094;
+        </button>
+
+
+        <!-- Large Image -->
+        <img id="lightbox-img" src="" alt="Preview">
+
+
+        <!-- Next Button -->
+        <button class="next" onclick="changeImage(1)">
+            &#10095;
+        </button>
+
+    </div>
+
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+
+</body>
+</html>
